@@ -6,7 +6,7 @@ import ReactTooltip from "react-tooltip";
 import axios from "axios";
 
 import Table from "../components/Table";
-import Tooltips from "../components/Tooltips";
+import Tooltip from "../components/Tooltips";
 import Modal, { ModalHandles } from "../components/Modal";
 
 import {
@@ -24,6 +24,7 @@ import {
 } from "../styles/pages/home";
 import { GetServerSideProps } from "next";
 import indexTools from "../utils/indexTools";
+import Tooltips from './../components/Tooltips/index';
 interface Tool {
   _id: string;
   name: string;
@@ -31,14 +32,15 @@ interface Tool {
   link: string;
 }
 
-export default function Home({ toggleTheme, tools: storegedTools }) {
+export default function Home({ toggleTheme, tools: storegedTools } : any) {
   const [tools, setTools] = useState<Array<Tool>>(storegedTools);
 
   const theme = useContext<DefaultTheme>(ThemeContext);
   const modalRef = useRef<ModalHandles>(null);
+  
 
   useEffect(() => {
-    ReactTooltip.rebuild();
+    rebuild();
   });
 
   const openModal = useCallback(() => {
@@ -119,3 +121,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     },
   };
 };
+function rebuild() {
+  throw new Error("Function not implemented.");
+}
+
