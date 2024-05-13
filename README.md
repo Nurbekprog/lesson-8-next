@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<h1 align="center">
+<br>
+  <img src="https://user-images.githubusercontent.com/23246257/114189767-8e43b980-9918-11eb-8e3d-f925b2a72032.png" alt="next-crud" width="120">
+<br>
+<br>
+next-crud
+</h1>
 
-First, run the development server:
+<p align="center">A simple fullstack CRUD using next.js</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/23246257/114190373-3c4f6380-9919-11eb-8e78-0350c2302d6b.gif" alt="demo" height="425">
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<hr />
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
+This app features all the latest tools and practices in web development!
 
-## Learn More
+- ⚛️ **React Js** — A JavaScript library for building user interfaces
+- ⚛️ **Next.js** — A React framework for developing single page aplications using javascript or typescript
+- 💹 **Node Js** — A web framework for Node Js
+- 💹 **MongoDB** — A document database, which means it stores data in JSON-like documents
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone this repo using git clone `https://github.com/arthurvamattos/next-crud.git`
+2. Move yourself to the appropriate directory: `cd next-crud`
+3. Run `yarn` to install dependencies
+4. Create a `.env` file and add the MongoDB url connection in DATABASE_URL field
+5. Run `yarn dev` to start the server
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
