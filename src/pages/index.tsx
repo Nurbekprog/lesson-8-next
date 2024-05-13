@@ -2,11 +2,11 @@ import Head from "next/head";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { FiTool, FiSun, FiMoon, FiPlus } from "react-icons/fi";
 import { ThemeContext, DefaultTheme } from "styled-components";
-import ReactTooltip from "react-tooltip";
-import axios from "axios";
+// import ReactTooltip from "react-tooltip";
+// import axios from "axios";
 
 import Table from "../components/Table";
-import Tooltip from "../components/Tooltips";
+// import Tooltip from "../components/Tooltips";
 import Modal, { ModalHandles } from "../components/Modal";
 
 import {
@@ -35,7 +35,7 @@ interface Tool {
 export default function Home({ toggleTheme, tools: storegedTools } : any) {
   const [tools, setTools] = useState<Array<Tool>>(storegedTools);
 
-  const theme = useContext<DefaultTheme>(ThemeContext);
+  const theme = useContext(ThemeContext);
   const modalRef = useRef<ModalHandles>(null);
   
 
@@ -81,11 +81,13 @@ export default function Home({ toggleTheme, tools: storegedTools } : any) {
                 data-tip
                 data-for="toggleTheme"
               >
-                {theme.title === "light" ? (
-                  <FiSun size={28} color={theme.colors.secondary} />
-                ) : (
-                  <FiMoon size={28} color={theme.colors.secondary} />
-                )}
+                {
+  // theme && theme.title === "light" ? (
+  //   <FiSun size={28} color={theme.colors.secondary} />
+  // ) : (
+  //   <FiMoon size={28} color={theme.colors.secondary} />
+  // )
+}
               </ToggleTheme>
               <Add onClick={openModal} data-tip data-for="add">
                 <FiPlus size={36} color="fff" />
@@ -107,7 +109,7 @@ export default function Home({ toggleTheme, tools: storegedTools } : any) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const tools = await (await indexTools()).map((tool) => {
+  const tools = await (await indexTools()).map((tool: { _id: { toString: () => any; }; createdAt: { toString: () => any; }; }) => {
     return {
       ...tool,
       _id: tool._id.toString(),
