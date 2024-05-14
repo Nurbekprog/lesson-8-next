@@ -1,0 +1,26 @@
+{
+    "datas": [
+        {
+            "id": "1",
+            "fName": "Alex",
+            "lName": "Brown",
+            "country": "Canada",
+            "birthday": "1997-10-28",
+            "position": "Senior",
+            "job": "Fullstack",
+            "salary": "6000",
+            "isMarried": true
+        },
+        {
+            "id": "2",
+            "fName": "Tom",
+            "lName": "Smith",
+            "country": "USA",
+            "birthday": "2001-08-10",
+            "position": "Junior",
+            "job": "Frontend",
+            "salary": "700",
+            "isMarried": true
+        }
+    ]
+}
